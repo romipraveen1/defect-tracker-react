@@ -1,0 +1,131 @@
+{
+  "defects": [
+    {
+      "id": 1,
+      "defectid": "C001",
+      "moduleName": "Classifications",
+      "description": "high level",
+      "recreate": "step to step",
+      "severity": "low",
+      "priority": "high",
+      "defectType": 1,
+      "assignTo": 1,
+      "status": "open"
+    },
+    {
+      "id": 2,
+      "defectid": "C002",
+      "moduleName": "Books",
+      "description": "low level",
+      "recreate": "step to step",
+      "severity": "low",
+      "priority": "high",
+      "defectType": 1,
+      "assignTo": 1,
+      "status": "closed"
+    },
+    {
+      "defectid": "D005",
+      "moduleName": "1",
+      "recreate": "sdsr",
+      "severity": "Medium",
+      "priority": "Medium",
+      "defectType": "Functionality",
+      "assignTo": "2",
+      "status": "open",
+      "id": 3
+    }
+  ],
+  "developers": [
+    {
+      "username": "pakee",
+      "password": "789",
+      "repassword": "789",
+      "email": "nimal@hotmail.com",
+      "moduleId": 1,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "username": "Engineering1",
+      "password": "1234",
+      "repassword": "1234",
+      "email": "thuvi@gmail.com",
+      "moduleId": 1
+    },
+    {
+      "username": "pakees",
+      "password": "788",
+      "repassword": "788",
+      "email": "nimal@hotmail.com",
+      "id": 3,
+      "moduleId": 2
+    }
+  ],
+  "ModDevelopers": [
+    {
+      "developerName": "Pirathee",
+      "moduleId": 1,
+      "id": 1
+    },
+    {
+      "developerName": "Thuvi",
+      "moduleId": 1,
+      "id": 2
+    },
+    {
+      "developerName": "Pakee",
+      "moduleId": 2,
+      "id": 3
+    },
+    {
+      "developerName": "Romi",
+      "moduleId": "2",
+      "id": 4
+    },
+    {
+      "developerName": "Niru",
+      "moduleId": "4",
+      "id": 5
+    },
+    {
+      "developerName": "Sujanath",
+      "moduleId": "5",
+      "id": 6
+    }
+  ],
+  "modules": [
+    {
+      "id": 1,
+      "moduleName": "Classifications"
+    },
+    {
+      "id": 2,
+      "moduleName": "Books"
+    },
+    {
+      "moduleName": "jjf",
+      "id": 4
+    },
+    {
+      "moduleName": "rewre",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "moduleName": "dew"
+    },
+    {
+      "moduleName": "admin",
+      "id": 7
+    },
+    {
+      "moduleName": "M005",
+      "id": 8
+    },
+    {
+      "moduleName": "hi",
+      "id": 9
+    }
+  ]
+}
