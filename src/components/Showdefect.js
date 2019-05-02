@@ -17,32 +17,14 @@ class Show extends Component {
         };
     }
 
-    // state={
-    //     defectId:"",
-    //   }
-    //   delete = e =>{
-    //     this.setState({
-    //         post: e.target.value
-           
-    //     });
-    //     console.log(defectId);
-    // }
     delete(e){
         Deletedefect(e)
     }
 
     update(Edit){
        console.log(Edit)
-       // Editdefect(e)
-      // this.setState({ Edit });
-     // Editdefectfrom.Edit1(Edit)
-
+      
     }
-
-       
-
-
-
     componentDidMount() {
        
         let url = "http://localhost:8080/library/findDefect"
@@ -74,11 +56,6 @@ class Show extends Component {
             <Button size="sm" color="primary" tag={Link} to={"/Editdefectfrom/" + post.id}>Edit</Button>
             <Button size="sm" color="danger" onClick={() => this.delete(post.id)}>Delete</Button>
           </ButtonGroup>
-                                            {/* <button data-toggle="tooltip" title="Edit" class="pd-setting-ed" tag={Link} to={"/Editdefectfrom/" + post.id} onClick={this.update.bind(this,post.id)}><i
-                                                class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed" name="defectId"
-                                             onClick={this.delete.bind(this,post.id)}><i
-                                                class="fa fa-trash-o" aria-hidden="true"></i></button> */}
                                         </td>
                                     </tr></tbody>
 
