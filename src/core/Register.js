@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Postuser} from '../components/action/jsonfetch/Fetchuser';
+import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
 
 
 export default class Register extends Component {
@@ -76,17 +77,12 @@ onSubmit(e){
                         </div>
                         <div className="form-group col-lg-6">
                           <label>Role Type</label>
-                          {/* <select name="role "  onChange={this.onChange}  value={this.state.role} className="form-control">
-                          
-                                    <option  >Qa</option>
-                                    <option>Developer</option>
-                                    
-                                  </select> */}
-                          <input type="text" className="form-control" id="role" 
-                          name="role" 
-                          value={this.state.role}
-                          onChange={this.onChange}
-                          required />
+                  
+                           <Input type="select" name="role" id="role" value={this.state.role} onChange={this.onChange} autoComplete="address-level1">
+                                  
+                                    <option>QA</option>
+                                    <option>DEVELOPER</option>
+                           </Input>
                         </div>
                         <div className="form-group col-lg-6">
                           <label>Email Address</label>
