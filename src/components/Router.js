@@ -14,6 +14,7 @@ import Editdefectform from './Editdefectform';
 import DefectList from '../test/DefectList';
 import { BrowserRouter as Switch } from 'react-router-dom';
 import DefectEdit from '../test/DefectEdit';
+import ModuleUser from '../test/module/ModuleUser';
 
 
 
@@ -70,31 +71,8 @@ class Routers extends Component {
                               }
                             }/>
         
-        <Route path="/Register" exact strict render={
-                              () =>{
-                                return(  <Register/>);
-                              }
-                            }/>
-         {/* <Route path='/Editdefectform/:id' component={Editdefectform}/> */}
-         {/* <Route path='/Editdefectform/:id' exact strict render={
-                              () =>{
-                                return( 
-                                  <div className="all-content-wrapper">
-                                  <br/>
-                                   <Editdefectform/>
-                                   </div>);
-                              }
-                            }/> */}
-                             
-        {/* <Route path="/Editdefectform" exact strict render={
-                              () =>{
-                                return( 
-                                  <div className="all-content-wrapper">
-                                  <br/>
-                                   <Editdefectform/>
-                                   </div>);
-                              }
-                            }/> */}
+       
+       
         
         <Route path="/Showdefect" exact strict render={
                               () =>{
@@ -108,6 +86,24 @@ class Routers extends Component {
                                 return( 
                                   <DefectList/>
                                    );   
+                              }
+                            }/>
+
+<Route path="/Register" exact strict render={
+                              () =>{
+                                return( 
+                                  <Register/>
+                                   );     
+                              }
+                            }/>
+
+<Route path="/ModuleUser" exact strict render={
+                              () =>{
+                                return(
+                                   
+                                  <ModuleUser/>
+                             
+                                   );     
                               }
                             }/>
       
