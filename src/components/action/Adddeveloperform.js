@@ -109,10 +109,7 @@ export default class Content extends Component {
 
                                 <br />
                                 <label htmlFor="moduleId">Module Id</label>
-                                {/* <input type="text" className="form-control" id="id"
-                                name="id" 
-                                value={this.state.id}
-                                onChange={this.onChange}/> */}
+                               
                                 <select id="moduleId" className="form-control" name="id" value={this.state.id} onChange={this.onChange}>
                                 
                                 {this.state.Developer} 
