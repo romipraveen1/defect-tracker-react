@@ -23,13 +23,17 @@ class DefectEdit extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      item: this.emptyItem
+      item: this.emptyItem,
+      module:"",
+      
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleChange1 = this.handleChange1.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   async componentDidMount() {
+    
     if (this.props.match.params.id !== 'new') {
       const group = await (await fetch(`http://localhost:8080/library/findid/${this.props.match.params.id}`)).json();
       this.setState({item: group});
@@ -44,18 +48,42 @@ class DefectEdit extends Component {
           console.log(data)
             let Developer = data.map((post) => {
                 return (  
-                  <option value={post.id} >{post.moduleName}</option>
+                  <option value={post.id} data-id={post.id} key={post.id} >{post.moduleName}</option>
                     
                 )
             })
             this.setState({ Developer: Developer });
+           
         })
 
         
   }
-  select(id){
-    console.log(id)
-    let url1 = `http://localhost:8080/library/findmodule/${id}`;
+  // select(){
+  //   console.log(this.state.getModuleId)
+  //   let url1 = `http://localhost:8080/library/findmodule/${this.state.getModuleId}`;
+  //       console.log(url1);
+  //       fetch(url1)
+  //           .then(resp => resp.json())
+            
+  //           .then(data => {
+  //             console.log(data)
+             
+  //               let x = data.developer.map((post) => {
+  //                   return ( 
+  //                     <option value={post.id} >{ post.developerName}</option>  
+  //                   )
+  //               })
+  //               this.setState({ x });
+  //           })
+  // }
+  handleChange1(e){
+    this.setState({ 
+      module: e.target.value
+
+    })
+  console.log( e.target.value)
+    let id=e.target.value
+    let url1 = `http://localhost:8080/library/findmodule/${ e.target.value}`;
         console.log(url1);
         fetch(url1)
             .then(resp => resp.json())
@@ -68,8 +96,10 @@ class DefectEdit extends Component {
                       <option value={post.id} >{ post.developerName}</option>  
                     )
                 })
-                this.setState({ x:data });
+                this.setState({ x });
             })
+ console.log(e.target.value)
+  
   }
 
   handleChange(e) {
@@ -79,10 +109,10 @@ class DefectEdit extends Component {
     
     const name = target.name;
     let item = {...this.state.item};
+    console.log(item)
     item[name] = value;
     this.setState({item});
-
-
+   
   }
 
   async handleSubmit(e) {
@@ -110,7 +140,7 @@ class DefectEdit extends Component {
             <Label for="address">module</Label>
             {/* <Input type="text" name="module" id="module" value={item.module || ''}
                    onChange={this.handleChange} autoComplete="address-level1"/> */}
-                   <select className="form-control" name="module" id="module" value={item.module || ''} onChange={this.handleChange  }   autoComplete="address-level1">
+                   <select className="form-control" name="module" id="module" value={item.module || ''} onChange={this.handleChange1 }   autoComplete="address-level1">
                                   {this.state.Developer}
                                   </select>
           </FormGroup>
@@ -160,7 +190,8 @@ class DefectEdit extends Component {
               {/* <Input type="text" name="assignTo" id="assignTo" value={item.assignTo || ''}
                      onChange={this.handleChange} autoComplete="address-level1"/> */}
                       <select className="form-control" name="assignTo" id="assignTo" value={item.assignTo || ''} onChange={this.handleChange } autoComplete="address-level1">
-                                  {this.state.x}
+                                  {this.state.x }
+                                  
                                   </select>
             </FormGroup>
             <FormGroup className="col-md-3 mb-3">
