@@ -12,16 +12,6 @@ export default class Content extends Component {
     };
 }
 
-
-
-
-  // constructor(){
-  //     super()
-
-  //                   // this.onChange=this.onChange.bind(this);
-  //                   // this.onSubmit=this.onSubmit.bind(this);
-  //   }
-
   state = {
 
     defectId: "",
@@ -133,29 +123,11 @@ change8 = (e) => {
       assignTo: "",
       status: ""
     })
-    // const defects = {
-
-    //   defectId: this.state.defectId,
-    //   module: this.state.module,
-    //   description: this.state.description,
-    //   steps: this.state.steps,
-    //   severity: this.state.severity,
-    //   priority: this.state.priority,
-    //   defectType: this.state.defectType,
-    //   assignTo: this.state.assignTo,
-    //   status: this.state.status
-
-    // }
-    //console.log(defects)
-    //console.log(this.state)
+   
     createBlogPost(this.state);
   }
 
-  // find(id){
-  //   console.log(id);
-    
-  
-  // }
+
   
   componentDidMount() {
     let url = "http://localhost:8080/library/findmodule"
