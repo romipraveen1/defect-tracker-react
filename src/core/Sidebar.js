@@ -65,9 +65,18 @@ export default class Sidebar extends Component {
                     <a className="has-arrow" href="all-courses.html" aria-expanded="false"><span className="educate-icon educate-library icon-wrap" /> <span className="mini-click-non">Modules</span></a>
                     <ul className="submenu-angle" aria-expanded="false">
                       <li><a title="Add Library" href="modules.html"><span className="mini-sub-pro">
-                      <Link to="/Addmodule"> AddModule</Link></span></a></li>
+                      <Link to="/Addmodule"> AddModule</Link></span></a></li><br/>
+                      <li><a title="Add Library" href="modules.html"><span className="mini-sub-pro">
+                      <Link to="/ModuleUser">ModuleUser</Link></span></a></li>
                     </ul>
                   </li>
+                  {/* <li>
+                    <a className="has-arrow" href="all-courses.html" aria-expanded="false"><span className="educate-icon educate-library icon-wrap" /> <span className="mini-click-non">Modules</span></a>
+                    <ul className="submenu-angle" aria-expanded="false">
+                      <li><a title="Add Library" href="modules.html"><span className="mini-sub-pro">
+                      <Link to="/AddModuleUser"> AddModuleUser</Link></span></a></li>
+                    </ul>
+                  </li> */}
                   <li>
                     <a className="has-arrow" href="mailbox.html" aria-expanded="false"><span className="educate-icon educate-message icon-wrap" /> <span className="mini-click-non">Mailbox</span></a>
                     <ul className="submenu-angle" aria-expanded="false">
@@ -82,7 +91,7 @@ export default class Sidebar extends Component {
                     <a className="has-arrow" href="#" aria-expanded="false"><span className="educate-icon educate-pages icon-wrap" /> <span className="mini-click-non">Pages</span></a>
                     <ul className="submenu-angle page-mini-nb-dp" aria-expanded="false">
                       <li><a title="Login" href="index.html"><span className="mini-sub-pro">Login</span></a></li>
-                      <li><a title="Register" href="register.html"><span className="mini-sub-pro">Register</span></a></li>
+                      <li><a title="Register" href="register.html"><span className="mini-sub-pro"><Link to="/Register">Register</Link></span></a></li>
                       <li><a title="Password Recovery" href="password-recovery.html"><span className="mini-sub-pro">Password Recovery</span></a></li>
                     </ul>
                   </li>
