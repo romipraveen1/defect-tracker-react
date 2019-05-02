@@ -13,7 +13,6 @@ export function Deletedefect(id) {
             'Content-Type': 'application/json'
         }
     }).then(res => {
-        
         return res;
     }).catch(err => err);
 }
