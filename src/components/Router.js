@@ -15,13 +15,15 @@ import DefectList from '../test/DefectList';
 import { BrowserRouter as Switch } from 'react-router-dom';
 import DefectEdit from '../test/DefectEdit';
 import ModuleUser from '../test/module/ModuleUser';
+import { CookiesProvider } from 'react-cookie';
+import Home from '../test/authentication/Home';
 
 
 
 class Routers extends Component {
     render() {
         return(
-            
+          <CookiesProvider>
             <Router>
                <Switch>
             <div>
@@ -33,6 +35,7 @@ class Routers extends Component {
             {/* <Login/> */}
               
               {/* <Route exact path="/" Component={Dashboard}/> */}
+              <Route path='/' exact={true} component={Home}/>
               <Route path='/groups/:id' component={DefectEdit}/>
        
               <Route path="/" exact strict render={
@@ -110,6 +113,7 @@ class Routers extends Component {
             </div>
             </Switch>
             </Router>
+            </CookiesProvider>
         );
 }
 
