@@ -76,6 +76,10 @@ class DefectEdit extends Component {
   //               this.setState({ x });
   //           })
   // }
+    //               })
+  //               this.setState({ x });
+  //           })
+  // }
   handleChange1(e){
     this.setState({ 
       module: e.target.value
